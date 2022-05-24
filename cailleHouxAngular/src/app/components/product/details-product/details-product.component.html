@@ -1,0 +1,18 @@
+<div *ngIf="targetProduct" class="card">
+  <a class="btn btn-info" routerLink="/products">Magasin</a>
+
+  <div class="d-flex justify-content-center container my-5">
+    <div class="card p-3 bg-white">
+      <div class="about-product text-center mt-2">
+        <img src="assets/{{targetProduct.picture}}" width="300" alt="Product's image">
+        <div>
+          <h4>{{targetProduct.name}}</h4>
+          <p>{{targetProduct.description}}</p>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Prix</span><span>{{targetProduct.price}}€</span></div>
+      <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Stock</span><span>{{targetProduct.quantity}} {{targetProduct.quantity >1 ? "pièces":"pièce"}}</span></div>
+    </div>
+  </div>
+</div>

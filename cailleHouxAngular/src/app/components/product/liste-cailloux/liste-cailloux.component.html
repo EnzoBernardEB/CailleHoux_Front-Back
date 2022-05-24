@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row gap-1 justify-content-center">
+    <div *ngFor="let product of allProducts" class="card col-3 ">
+      <img src="/assets/{{product.picture}}" class="card-img-top img-fluid" alt="Product's image">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title ">{{product.name}}</h5>
+        <p class="card-text flex-grow-1">{{product.description}}</p>
+        <div class="d-flex justify-content-around mb-2">
+          <button class="btn btn-primary">Ajouter au panier <i class="fa-solid fa-cart-shopping"></i></button>
+          <button class="btn btn-primary" routerLink="detailsProduct/{{product.id}}">Voir details <i class="fa-solid fa-circle-info"></i></button>
+        </div>
+        <div class="card-footer text-center">
+          <small class="text-muted ">Prix : {{product.price}}€</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
